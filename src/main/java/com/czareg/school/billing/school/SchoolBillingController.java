@@ -1,9 +1,9 @@
 package com.czareg.school.billing.school;
 
+import com.czareg.school.billing.common.component.ChildBillingPreparer;
+import com.czareg.school.billing.common.component.SchoolBillingPreparer;
 import com.czareg.school.billing.common.dto.ChildBillingDTO;
 import com.czareg.school.billing.common.dto.TotalBillingDTO;
-import com.czareg.school.billing.school.component.ChildBillingPreparer;
-import com.czareg.school.billing.school.component.SchoolBillingPreparer;
 import com.czareg.school.billing.school.dto.ChildDTO;
 import com.czareg.school.billing.school.dto.ParentDTO;
 import com.czareg.school.billing.school.dto.SchoolBillingRequestDTO;

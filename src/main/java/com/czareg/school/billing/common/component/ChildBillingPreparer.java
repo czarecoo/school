@@ -1,4 +1,4 @@
-package com.czareg.school.billing.school.component;
+package com.czareg.school.billing.common.component;
 
 import com.czareg.school.attendence.Attendance;
 import com.czareg.school.attendence.AttendanceRepository;

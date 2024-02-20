@@ -1,4 +1,4 @@
-package com.czareg.school.billing.school.component;
+package com.czareg.school.billing.common.component;
 
 import com.czareg.school.billing.common.dto.ChildBillingDTO;
 import com.czareg.school.billing.common.dto.TotalBillingDTO;

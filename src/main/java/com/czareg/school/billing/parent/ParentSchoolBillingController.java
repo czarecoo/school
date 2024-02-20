@@ -1,12 +1,12 @@
 package com.czareg.school.billing.parent;
 
+import com.czareg.school.billing.common.component.ChildBillingPreparer;
+import com.czareg.school.billing.common.component.SchoolBillingPreparer;
 import com.czareg.school.billing.common.dto.ChildBillingDTO;
 import com.czareg.school.billing.common.dto.TotalBillingDTO;
 import com.czareg.school.billing.parent.dto.ChildDTO;
 import com.czareg.school.billing.parent.dto.ParentSchoolBillingRequestDTO;
 import com.czareg.school.billing.parent.dto.ParentSchoolBillingResponseDTO;
-import com.czareg.school.billing.school.component.ChildBillingPreparer;
-import com.czareg.school.billing.school.component.SchoolBillingPreparer;
 import com.czareg.school.child.Child;
 import com.czareg.school.child.ChildRepository;
 import jakarta.validation.Valid;
