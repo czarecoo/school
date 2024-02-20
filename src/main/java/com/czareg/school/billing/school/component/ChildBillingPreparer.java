@@ -1,9 +1,9 @@
-package com.czareg.school.billing.school.components;
+package com.czareg.school.billing.school.component;
 
 import com.czareg.school.attendence.Attendance;
 import com.czareg.school.attendence.AttendanceRepository;
-import com.czareg.school.billing.school.dto.ChildBillingDTO;
-import com.czareg.school.billing.school.dto.TimeSlotDTO;
+import com.czareg.school.billing.common.dto.ChildBillingDTO;
+import com.czareg.school.billing.common.dto.TimeSlotDTO;
 import com.czareg.school.child.Child;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

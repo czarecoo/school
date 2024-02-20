@@ -8,5 +8,7 @@ import java.util.List;
 @Repository
 public interface ChildRepository extends JpaRepository<Child, Long> {
 
-    List<Child> findBySchoolId(Long schoolId);
+    List<Child> findBySchoolId(long schoolId);
+
+    List<Child> findBySchoolIdAndParentId(long schoolId, long parentId);
 }

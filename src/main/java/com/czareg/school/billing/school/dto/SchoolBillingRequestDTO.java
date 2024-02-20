@@ -1,13 +1,10 @@
 package com.czareg.school.billing.school.dto;
 
-import java.util.Objects;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import org.springframework.lang.NonNull;
 
-public record SchoolBillingRequestDTO(Long schoolId, int month) {
-
-    public SchoolBillingRequestDTO {
-        Objects.requireNonNull(schoolId, "SchoolId cannot be null");
-        if (month < 1 || month > 12) {
-            throw new IllegalArgumentException("Invalid month value. Month must be between 1 and 12.");
-        }
-    }
+public record SchoolBillingRequestDTO(@NonNull @Min(0) Long schoolId,
+                                      @NotNull @Min(1) @Max(12) Integer month) {
 }

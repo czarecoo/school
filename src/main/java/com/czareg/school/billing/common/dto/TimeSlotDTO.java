@@ -1,4 +1,4 @@
-package com.czareg.school.billing.school.dto;
+package com.czareg.school.billing.common.dto;
 
 import java.time.LocalDateTime;
 

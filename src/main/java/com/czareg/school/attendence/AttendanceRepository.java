@@ -10,5 +10,5 @@ import java.util.List;
 public interface AttendanceRepository extends JpaRepository<Attendance, Long> {
 
     @Query("SELECT a FROM Attendance a WHERE a.child.id = :childId AND FUNCTION('MONTH', a.entryDate) = :month")
-    List<Attendance> findByChildIdAndMonth(Long childId, int month);
+    List<Attendance> findByChildIdAndMonth(long childId, int month);
 }
