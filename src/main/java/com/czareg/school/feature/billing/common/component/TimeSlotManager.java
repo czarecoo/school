@@ -2,6 +2,7 @@ package com.czareg.school.feature.billing.common.component;
 
 import com.czareg.school.config.FreeTimeSlotConfig;
 import com.czareg.school.feature.billing.common.dto.TimeSlotDTO;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +16,7 @@ public class TimeSlotManager {
 
     private final FreeTimeSlotConfig freeTimeSlotConfig;
 
-    public List<TimeSlotDTO> splitTimeIntoHourlySlots(LocalDateTime entryDate, LocalDateTime exitDate) {
+    public List<TimeSlotDTO> splitTimeIntoHourlySlots(@NonNull LocalDateTime entryDate, @NonNull LocalDateTime exitDate) {
         List<TimeSlotDTO> hourlySlots = new ArrayList<>();
 
         LocalDateTime currentHour = entryDate.withMinute(0).withSecond(0).withNano(0);

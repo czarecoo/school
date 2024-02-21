@@ -4,6 +4,7 @@ import com.czareg.school.feature.attendence.Attendance;
 import com.czareg.school.feature.billing.common.dto.ChildBillingDTO;
 import com.czareg.school.feature.billing.common.dto.TimeSlotDTO;
 import com.czareg.school.feature.school.School;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +19,7 @@ public class ChildBillingPreparer {
 
     private final TimeSlotManager timeSlotManager;
 
-    public ChildBillingDTO prepare(List<Attendance> attendanceList, School school) {
+    public ChildBillingDTO prepare(@NonNull List<Attendance> attendanceList, @NonNull School school) {
         BigDecimal totalBillingAmount;
         List<TimeSlotDTO> billableTimeslots = new ArrayList<>();
 

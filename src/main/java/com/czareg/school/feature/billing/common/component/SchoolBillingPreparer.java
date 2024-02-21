@@ -4,6 +4,7 @@ import com.czareg.school.feature.billing.common.dto.ChildBillingDTO;
 import com.czareg.school.feature.billing.common.dto.ChildDTO;
 import com.czareg.school.feature.billing.common.dto.TotalBillingDTO;
 import com.czareg.school.feature.school.School;
+import lombok.NonNull;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -12,7 +13,7 @@ import java.util.List;
 @Component
 public class SchoolBillingPreparer {
 
-    public TotalBillingDTO prepare(List<ChildDTO> childDTOList, School school) {
+    public TotalBillingDTO prepare(@NonNull List<ChildDTO> childDTOList, @NonNull School school) {
         int totalFreeHours = 0;
         int totalBillableHours = 0;
         BigDecimal totalBillingAmount = BigDecimal.ZERO;

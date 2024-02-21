@@ -8,6 +8,7 @@ import com.czareg.school.feature.billing.common.dto.ParentDTO;
 import com.czareg.school.feature.child.Child;
 import com.czareg.school.feature.parent.Parent;
 import com.czareg.school.feature.school.School;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +22,7 @@ public class ChildProcessor {
     private final AttendenceService attendenceService;
     private final ChildBillingPreparer childBillingPreparer;
 
-    public List<ChildDTO> process(List<Child> childList, School school, int month) {
+    public List<ChildDTO> process(@NonNull List<Child> childList, @NonNull School school, int month) {
         List<ChildDTO> childDTOList = new ArrayList<>();
         for (Child child : childList) {
             List<Attendance> attendanceList = attendenceService.findByChildIdAndMonth(child.getId(), month);
