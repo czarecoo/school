@@ -1,0 +1,47 @@
+{
+  "totalBilling": {
+    "freeHours": 0,
+    "billableHours": 0,
+    "hourPrice": 10.53,
+    "totalBillingAmount": 0.00,
+    "totalHours": 0
+  },
+  "children": [
+    {
+      "id": 1,
+      "firstName": "Emma",
+      "lastName": "Doe",
+      "parent": {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe"
+      },
+      "billing": {
+        "freeHours": 0,
+        "billableHours": 0,
+        "billableTimeslots": [],
+        "hourPrice": 10.53,
+        "totalBillingAmount": 0.00,
+        "totalHours": 0
+      }
+    },
+    {
+      "id": 6,
+      "firstName": "James",
+      "lastName": "Johnson",
+      "parent": {
+        "id": 3,
+        "firstName": "Michael",
+        "lastName": "Johnson"
+      },
+      "billing": {
+        "freeHours": 0,
+        "billableHours": 0,
+        "billableTimeslots": [],
+        "hourPrice": 10.53,
+        "totalBillingAmount": 0.00,
+        "totalHours": 0
+      }
+    }
+  ]
+}

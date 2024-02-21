@@ -1,0 +1,29 @@
+{
+  "totalBilling": {
+    "freeHours": 0,
+    "billableHours": 0,
+    "hourPrice": 12.75,
+    "totalBillingAmount": 0.00,
+    "totalHours": 0
+  },
+  "children": [
+    {
+      "id": 4,
+      "firstName": "Liam",
+      "lastName": "Doe",
+      "parent": {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe"
+      },
+      "billing": {
+        "freeHours": 0,
+        "billableHours": 0,
+        "billableTimeslots": [],
+        "hourPrice": 12.75,
+        "totalBillingAmount": 0.00,
+        "totalHours": 0
+      }
+    }
+  ]
+}

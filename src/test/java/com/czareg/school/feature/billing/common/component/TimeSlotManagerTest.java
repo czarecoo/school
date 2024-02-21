@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TimeSlotManagerTest {
 
-    public static final FreeTimeSlotConfig FREE_TIME_SLOT_CONFIG = new FreeTimeSlotConfig(6, 30, 10, 45);
+    private static final FreeTimeSlotConfig FREE_TIME_SLOT_CONFIG = new FreeTimeSlotConfig(6, 30, 10, 45);
     private final LocalDateTime ORIGIN = LocalDateTime.of(2000, 1, 1, 7, 0);
     private TimeSlotManager timeSlotManager;
 

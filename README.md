@@ -1,3 +1,5 @@
+http://localhost:8080/swagger-ui.html
+
 Stwórz aplikację w technologii Java Spring Boot , która przy pomocy REST API wystawi 2
 endpointy (endpointy wg twojego uznania):
 

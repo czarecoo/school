@@ -19,8 +19,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SchoolBillingControllerE2ETest {
 
     private static final String BASE_URL = "/billing/school";
-    public static final String RESPONSE_200_JSON = "school_billing_200_response.json";
-    public static final String RESPONSE_400_JSON = "school_billing_400_response.json";
+    private static final String RESPONSE_200_FULL_JSON = "school_billing_200_full_response.json";
+    private static final String RESPONSE_200_EMPTY_JSON = "school_billing_200_empty_response.json";
+    private static final String RESPONSE_400_JSON = "school_billing_400_response.json";
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -29,7 +30,7 @@ class SchoolBillingControllerE2ETest {
     private ObjectMapper objectMapper;
 
     @Test
-    void shouldReturnProperBillingForGivenSchoolAndMonth() throws IOException {
+    void shouldReturnProperBillingForGivenSchoolAndMonthWhenAttendanceWasRegistered() throws IOException {
         String requestJson = "{\"schoolId\":2,\"month\":2}";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -38,7 +39,22 @@ class SchoolBillingControllerE2ETest {
         ResponseEntity<String> responseEntity = restTemplate.exchange(BASE_URL, HttpMethod.POST, request, String.class);
 
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        JsonNode expectedResponse = objectMapper.readTree(FileUtils.readFileAsString(RESPONSE_200_JSON));
+        JsonNode expectedResponse = objectMapper.readTree(FileUtils.readFileAsString(RESPONSE_200_FULL_JSON));
+        JsonNode actualResponse = objectMapper.readTree(responseEntity.getBody());
+        assertEquals(expectedResponse, actualResponse);
+    }
+
+    @Test
+    void shouldReturnEmptyBillingForGivenSchoolAndMonthWhenNoAttendanceWasRegistered() throws IOException {
+        String requestJson = "{\"schoolId\":1,\"month\":12}";
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<String> request = new HttpEntity<>(requestJson, headers);
+
+        ResponseEntity<String> responseEntity = restTemplate.exchange(BASE_URL, HttpMethod.POST, request, String.class);
+
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+        JsonNode expectedResponse = objectMapper.readTree(FileUtils.readFileAsString(RESPONSE_200_EMPTY_JSON));
         JsonNode actualResponse = objectMapper.readTree(responseEntity.getBody());
         assertEquals(expectedResponse, actualResponse);
     }
