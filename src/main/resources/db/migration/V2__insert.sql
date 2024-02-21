@@ -1,7 +1,8 @@
 INSERT INTO Parent (firstname, lastname) VALUES
 ('John', 'Doe'),
 ('Jane', 'Smith'),
-('Michael', 'Johnson');
+('Michael', 'Johnson'),
+('Bob', 'Odd');
 
 INSERT INTO School (name, hour_price) VALUES
 ('Happy Kids Kindergarten', 10.53),

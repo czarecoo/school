@@ -15,4 +15,8 @@ public class SchoolService {
         return schoolRepository.findById(schoolId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "School not found with id: %s".formatted(schoolId)));
     }
+
+    public boolean existsById(long schoolId) {
+        return schoolRepository.existsById(schoolId);
+    }
 }
