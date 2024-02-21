@@ -2,7 +2,9 @@ package com.czareg.school.feature.attendence;
 
 import com.czareg.school.feature.child.Child;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.proxy.HibernateProxy;
 
@@ -13,6 +15,8 @@ import java.util.Objects;
 @Table(name = "attendance")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Attendance {
 
     @Id

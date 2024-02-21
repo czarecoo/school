@@ -3,7 +3,9 @@ package com.czareg.school.feature.child;
 import com.czareg.school.feature.parent.Parent;
 import com.czareg.school.feature.school.School;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.proxy.HibernateProxy;
 
@@ -13,6 +15,8 @@ import java.util.Objects;
 @Table(name = "child")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Child {
 
     @Id

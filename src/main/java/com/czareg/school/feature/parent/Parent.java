@@ -1,7 +1,9 @@
 package com.czareg.school.feature.parent;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.proxy.HibernateProxy;
 
@@ -11,6 +13,8 @@ import java.util.Objects;
 @Table(name = "parent")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Parent {
 
     @Id
