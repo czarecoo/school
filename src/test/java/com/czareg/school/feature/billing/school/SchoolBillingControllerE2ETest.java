@@ -1,4 +1,4 @@
-package com.czareg.school.feature.billing.parent;
+package com.czareg.school.feature.billing.school;
 
 import com.czareg.school.config.ErrorResponse;
 import com.czareg.school.util.FileUtils;
@@ -16,11 +16,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ParentSchoolBillingControllerE2ETest {
+class SchoolBillingControllerE2ETest {
 
-    private static final String BASE_URL = "/billing/parent/school";
-    public static final String RESPONSE_200_JSON = "parent_school_billing_200_response.json";
-    public static final String RESPONSE_400_JSON = "parent_school_billing_400_response.json";
+    private static final String BASE_URL = "/billing/school";
+    public static final String RESPONSE_200_JSON = "school_billing_200_response.json";
+    public static final String RESPONSE_400_JSON = "school_billing_400_response.json";
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -29,8 +29,8 @@ class ParentSchoolBillingControllerE2ETest {
     private ObjectMapper objectMapper;
 
     @Test
-    void shouldReturnProperBillingForGivenParentSchoolAndMonth() throws IOException {
-        String requestJson = "{\"parentId\":1,\"schoolId\":1,\"month\":2}";
+    void shouldReturnProperBillingForGivenSchoolAndMonth() throws IOException {
+        String requestJson = "{\"schoolId\":2,\"month\":2}";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> request = new HttpEntity<>(requestJson, headers);
@@ -44,8 +44,8 @@ class ParentSchoolBillingControllerE2ETest {
     }
 
     @Test
-    void shouldReturnErrorResponseForIncorrectParentIdSchoolIdAndMonth() throws IOException {
-        String requestJson = "{\"parentId\":-5,\"schoolId\":null,\"month\":15}";
+    void shouldReturnErrorResponseForIncorrectSchoolIdAndMonth() throws IOException {
+        String requestJson = "{\"schoolId\":0,\"month\":0}";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> request = new HttpEntity<>(requestJson, headers);

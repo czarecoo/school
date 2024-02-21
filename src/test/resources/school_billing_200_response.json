@@ -1,0 +1,65 @@
+{
+  "totalBilling": {
+    "freeHours": 10,
+    "billableHours": 4,
+    "hourPrice": 12.75,
+    "totalBillingAmount": 51.00,
+    "totalHours": 14
+  },
+  "children": [
+    {
+      "id": 2,
+      "firstName": "Noah",
+      "lastName": "Smith",
+      "parent": {
+        "id": 2,
+        "firstName": "Jane",
+        "lastName": "Smith"
+      },
+      "billing": {
+        "freeHours": 5,
+        "billableHours": 2,
+        "billableTimeslots": [
+          {
+            "start": "2024-02-20T06:59:00",
+            "end": "2024-02-20T07:00:00"
+          },
+          {
+            "start": "2024-02-20T12:00:00",
+            "end": "2024-02-20T12:01:00"
+          }
+        ],
+        "hourPrice": 12.75,
+        "totalBillingAmount": 25.50,
+        "totalHours": 7
+      }
+    },
+    {
+      "id": 4,
+      "firstName": "Liam",
+      "lastName": "Doe",
+      "parent": {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe"
+      },
+      "billing": {
+        "freeHours": 5,
+        "billableHours": 2,
+        "billableTimeslots": [
+          {
+            "start": "2024-02-20T06:45:00",
+            "end": "2024-02-20T07:00:00"
+          },
+          {
+            "start": "2024-02-20T12:00:00",
+            "end": "2024-02-20T12:30:00"
+          }
+        ],
+        "hourPrice": 12.75,
+        "totalBillingAmount": 25.50,
+        "totalHours": 7
+      }
+    }
+  ]
+}

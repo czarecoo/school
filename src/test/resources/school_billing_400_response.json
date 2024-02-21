@@ -1,0 +1,12 @@
+{
+  "timestamp": "2024-02-21T14:39:49.506245300Z",
+  "status": 400,
+  "reason": "Bad Request",
+  "path": "uri=/billing/school",
+  "errors": [
+    "month: must be greater than or equal to 1",
+    "schoolId: School with given id does not exist"
+  ],
+  "message": "Validation failed",
+  "uuid": "5f240a58-d015-45ea-86fa-6a61e61aa94e"
+}
