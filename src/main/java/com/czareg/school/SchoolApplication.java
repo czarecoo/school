@@ -1,16 +1,14 @@
 package com.czareg.school;
 
-import com.czareg.school.config.FreeTimeSlotConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @SpringBootApplication
-@EnableConfigurationProperties(FreeTimeSlotConfig.class)
+@ConfigurationPropertiesScan
 public class SchoolApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SchoolApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(SchoolApplication.class, args);
+    }
 }
